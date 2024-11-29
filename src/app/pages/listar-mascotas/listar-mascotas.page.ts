@@ -12,8 +12,7 @@ export interface Mascota {
   especie: String,
   raza: String,
   edad: Number,
-  sexo: Sexo,
-  alergias: String
+  sexo: Sexo
 }
 
 // Definición del enum (enumeración) 'Sexo'
@@ -34,11 +33,9 @@ export enum Sexo {
 // Arreglo mascotas ->Lista de objetos
 export class ListarMascotasPage implements OnInit {
   mascotas: Mascota[] = [
-    { nombre: 'Toti', especie: 'Perro', raza: 'Beagle', edad: 3, sexo: Sexo.Hembra, alergias: 'Polvo' },
-    { nombre: 'Lucio', especie: 'Gato', raza: 'Mestizo', edad: 8, sexo: Sexo.Macho, alergias: 'Ninguna' },
-    { nombre: 'Rex', especie: 'Perro', raza: 'Labrador', edad: 5, sexo: Sexo.Macho, alergias: 'Ninguna' },
-    { nombre: 'Luna', especie: 'Gato', raza: 'Siamés', edad: 2, sexo: Sexo.Hembra, alergias: 'Polen' },
-    { nombre: 'Coco', especie: 'Conejo', raza: 'Enano', edad: 1, sexo: Sexo.Macho, alergias: 'Arachis' }
+    { nombre: 'Toti', especie: 'Perro', raza: 'Beagle', edad: 3, sexo: Sexo.Hembra},
+    { nombre: 'Lucio', especie: 'Gato', raza: 'Mestizo', edad: 8, sexo: Sexo.Macho},
+    { nombre: 'Rex', especie: 'Perro', raza: 'Labrador', edad: 5, sexo: Sexo.Macho,},
   ];
 
 
@@ -55,7 +52,7 @@ export class ListarMascotasPage implements OnInit {
   }
 
   goToCreate(){
-    this.router.navigate(['/animal-form']);
+    this.router.navigate(['/agregar-mascota']);
   }
   goToRandom(){
     this.router.navigate(['/random'])

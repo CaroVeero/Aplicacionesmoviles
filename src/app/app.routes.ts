@@ -11,10 +11,6 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'animal-form',
-    loadComponent: () => import('./animal-form/animal-form.page').then( m => m.AnimalFormPage)
-  },
-  {
     path: 'listar-mascotas',
     loadComponent: () => import('./pages/listar-mascotas/listar-mascotas.page').then( m => m.ListarMascotasPage)
   },
@@ -25,9 +21,14 @@ export const routes: Routes = [
   {
     path: 'register',
     loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage)
-  },  {
+  },
+  {
     path: 'register',
     loadComponent: () => import('./pages/register/register.page').then( m => m.RegisterPage)
+  },
+  {
+    path: 'agregar-mascota',
+    loadComponent: () => import('./pages/agregar-mascota/agregar-mascota.page').then( m => m.AgregarMascotaPage)
   },
 
 
