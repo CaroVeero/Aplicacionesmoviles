@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonThumbnail, IonLabel, IonGrid, IonRow, IonCol, IonButton, IonButtons, IonIcon, IonBackButton, IonFab, IonFabButton } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonThumbnail, IonLabel, IonGrid, IonRow, IonCol, IonButton, IonButtons, IonIcon, IonBackButton, IonFab, IonFabButton, IonSearchbar } from '@ionic/angular/standalone';
 import { addIcons} from 'ionicons';
-import { add,wineOutline } from 'ionicons/icons';
+import { add,pawOutline } from 'ionicons/icons';
 
 // Definición de la interfaz 'Mascota'
 export interface Mascota {
@@ -27,11 +27,13 @@ export enum Sexo {
   templateUrl: './listar-mascotas.page.html',
   styleUrls: ['./listar-mascotas.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonThumbnail, IonLabel, IonGrid, IonRow, IonCol, IonButton, IonButtons, IonIcon, IonBackButton, IonFab, IonFabButton]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonThumbnail, IonLabel, IonGrid, IonRow, IonCol, IonButton, IonButtons, IonIcon, IonBackButton, IonFab, IonFabButton, IonSearchbar]
 })
 
 // Arreglo mascotas ->Lista de objetos
 export class ListarMascotasPage implements OnInit {
+  searchTerm: string = '';
+
   mascotas: Mascota[] = [
     { nombre: 'Toti', especie: 'Perro', raza: 'Beagle', edad: 3, sexo: Sexo.Hembra},
     { nombre: 'Lucio', especie: 'Gato', raza: 'Mestizo', edad: 8, sexo: Sexo.Macho},
@@ -40,7 +42,7 @@ export class ListarMascotasPage implements OnInit {
 
 
   constructor(private router: Router) {
-    addIcons({add,wineOutline});
+    addIcons({add,pawOutline});
    }
 
   // Método para redirigir al Home

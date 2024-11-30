@@ -29,7 +29,11 @@ export const routes: Routes = [
   {
     path: 'agregar-mascota',
     loadComponent: () => import('./pages/agregar-mascota/agregar-mascota.page').then( m => m.AgregarMascotaPage)
+  },  {
+    path: 'random',
+    loadComponent: () => import('./pages/random/random.page').then( m => m.RandomPage)
   },
+
 
 
 

@@ -5,7 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonButton, IonFa
 import { Router } from '@angular/router';
 import { TakePhotoService} from '../../services/take-photo.service'
 import { addIcons} from 'ionicons';
-import { add,listOutline } from 'ionicons/icons';
+import { add,listOutline,arrowBackOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-agregar-mascota',
@@ -27,7 +27,7 @@ export class AgregarMascotaPage implements OnInit {
   
 
   constructor(private router:Router, private takePhotoService: TakePhotoService) { 
-    addIcons({add,listOutline});
+    addIcons({add,listOutline,arrowBackOutline});
 
   }
 

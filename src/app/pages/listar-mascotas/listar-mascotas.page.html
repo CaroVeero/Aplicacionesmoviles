@@ -1,14 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button default-href="#"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Lista de mascotas</ion-title>
+    <ion-title>Mascotas registradas</ion-title>
   </ion-toolbar>
 </ion-header>
-
-
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -64,11 +58,11 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
-  <!-- <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button (click)="goToRandom()">
-      <ion-icon name="wine-outline"></ion-icon>
+      <ion-icon name="paw-outline"></ion-icon>
     </ion-fab-button>
-  </ion-fab> -->
+  </ion-fab>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="goToCreate()">
       <ion-icon name="add"></ion-icon>
